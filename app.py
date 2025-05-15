@@ -6,8 +6,7 @@ from utils.ocr_reader import extract_ab_from_image
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['REPORT_FOLDER'] = ' 'reports'
-
+app.config['REPORT_FOLDER'] = 'reports'
 jobs = []
 
 @app.route('/')
