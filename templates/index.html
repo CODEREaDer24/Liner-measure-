@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pool Plotter</title>
+</head>
+<body>
+    <h1>Upload Hand-Drawn A/B Sheet</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        A–B Line Length (feet): <input type="number" step="0.01" name="ab_length"><br><br>
+        Image: <input type="file" name="image" accept="image/*"><br><br>
+        <input type="submit" value="Upload & Process">
+    </form>
+</body>
+</html>
