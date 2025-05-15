@@ -7,6 +7,12 @@ from utils.ocr_reader import extract_ab_from_image
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['REPORT_FOLDER'] = 'reports'
+
+# Ensure required folders exist
+os.makedirs('uploads', exist_ok=True)
+os.makedirs('reports', exist_ok=True)
+os.makedirs('plots', exist_ok=True)
+
 jobs = []
 
 @app.route('/')
