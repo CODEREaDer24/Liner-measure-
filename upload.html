@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload A/B Measurement Sheet</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 30px; }
+    h1 { text-align: center; color: #333; }
+    form { max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    label { display: block; margin-bottom: 10px; font-weight: bold; }
+    input[type="file"] { width: 100%; padding: 10px; margin-bottom: 20px; }
+    button { background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+    .note { font-size: 0.9em; color: #555; margin-top: -10px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>Upload Pool A/B Sheet</h1>
+
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="image">Choose a photo of your hand-drawn A/B triangulation sheet:</label>
+    <input type="file" name="image" accept="image/*" required>
+
+    <div class="note">Accepts: .jpg, .png, .jpeg. We'll extract the data using OCR.</div>
+
+    <button type="submit">Upload & Analyze</button>
+  </form>
+
+</body>
+</html>
